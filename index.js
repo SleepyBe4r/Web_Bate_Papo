@@ -448,10 +448,10 @@ function mandar_Mensagem(req, resp){
 }
 
 function validarAutenticacao(req, resp, next) {
-    console.log(req.session.usuarioLogado);
     if (req.session.usuarioLogado) {
         next();
     } else{
+        resp.redirect("/login.html");
     }
 }
 
