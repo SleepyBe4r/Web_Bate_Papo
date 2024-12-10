@@ -451,6 +451,7 @@ function validarAutenticacao(req, resp, next) {
     if (req.session.usuarioLogado) {
         next();
     } else{
+        alert("voltando");
         resp.redirect("/login.html");
     }
 }
@@ -483,7 +484,7 @@ app.get('/logout', (req, resp) => {
     req.session.destroy(); //eliminar a sessão.
     resp.redirect('/login.html');
 });
--
+
 app.listen(port, host, () => {
     console.log(`Servidor iniciado no endereço http://${host}:${port}`);    
 })
