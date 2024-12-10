@@ -449,11 +449,8 @@ function mandar_Mensagem(req, resp){
 
 function validarAutenticacao(req, resp, next) {
     if (req.session.usuarioLogado) {
-        alert("deu certo");
         next();
     } else{
-        alert("voltando");
-        resp.redirect("/login.html");
     }
 }
 
