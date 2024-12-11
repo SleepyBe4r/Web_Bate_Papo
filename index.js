@@ -171,19 +171,19 @@ function cadastrar_Usuario(req, resp){
                             <!-- Campo Nome -->
                             <div class="mb-3">
                                 <label for="nome" class="form-label">Nome</label>
-                                <input type="text" class="form-control" id="nome" name="nome" placeholder="Digite seu nome" value="${nome || ''}" required>
+                                <input type="text" class="form-control" id="nome" name="nome" placeholder="Digite seu nome" value="${nome || ''}">
                                 ${!nome ? '<p class="text-danger">Nome é obrigatório!</p>' : ''}
                             </div>
                             <!-- Campo Data de Nascimento -->
                             <div class="mb-3">
                                 <label for="dataNascimento" class="form-label">Data de Nascimento</label>
-                                <input type="date" class="form-control" id="dataNascimento" name="dataNascimento" value="${dataNascimento || ''}" required>
+                                <input type="date" class="form-control" id="dataNascimento" name="dataNascimento" value="${dataNascimento || ''}">
                                 ${!dataNascimento ? '<p class="text-danger">Data de Nascimento é obrigatório!</p>' : idade < 12 ? '<p class="text-danger">O Usuario de ter 12 ou mais anos de idade!</p>' : ''}
                             </div>
                             <!-- Campo Nickname -->
                             <div class="mb-3">
                                 <label for="apelido" class="form-label">Nickname ou Apelido</label>
-                                <input type="text" class="form-control" id="apelido" name="apelido" placeholder="Escolha um apelido" value="${apelido || ''}" required>
+                                <input type="text" class="form-control" id="apelido" name="apelido" placeholder="Escolha um apelido" value="${apelido || ''}">
                                 ${!apelido ? '<p class="text-danger">Apelido é obrigatório!</p>' : ''}
                             </div>
                             <!-- Botões -->
